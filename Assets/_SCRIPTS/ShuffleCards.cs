@@ -9,7 +9,8 @@ public class ShuffleCards : MonoBehaviour {
 	public void ShuffleFullDeck ()
 	{
 
-		Random rdm = new Random ();
+		// Random rdm = new Random ();
+		
 
 		/*
 		for (int shuffletimes = 0; shuffletimes < 1000; shuffletimes++){

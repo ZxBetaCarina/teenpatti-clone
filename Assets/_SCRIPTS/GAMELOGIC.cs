@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using Photon.Pun;
 
-public class GAMELOGIC : Photon.MonoBehaviour {
+public class GAMELOGIC : PhotonNetwork {
 
 
 	public enum PHASE{
@@ -104,7 +105,7 @@ public class GAMELOGIC : Photon.MonoBehaviour {
 	void Start () {
 		TAPIS = PlayerPrefs.GetInt ("MONEY");
 
-		if(PhotonNetwork.isMasterClient){
+		if(PhotonNetwork.IsMasterClient){
 			photonView.RPC ("InitializeAllCards", PhotonTargets.AllBuffered);
 		}
 
